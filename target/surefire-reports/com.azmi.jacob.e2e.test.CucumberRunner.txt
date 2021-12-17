@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: com.azmi.jacob.e2e.test.CucumberRunner
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 26.46 sec <<< FAILURE!
+vehicle registrations extracted from file and information compared against online description(Check local file description of vehicle matches information online)  Time elapsed: 25.449 sec  <<< FAILURE!
+java.lang.AssertionError: Some stored records do not match online records
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at com.azmi.jacob.e2e.test.CheckCarDetailsStepdefs.theInformationIsConfirmedAsCorrect(CheckCarDetailsStepdefs.java:207)
+	at ?.the information is confirmed as correct(file:///C:/Users/Jacob/IdeaProjects/E2ETest/src/test/resources/features/CheckCarDetails.feature:28)
+
