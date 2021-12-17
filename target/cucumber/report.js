@@ -57,12 +57,6 @@ formatter.examples({
         "car_input.txt",
         "car_output.txt"
       ]
-    },
-    {
-      "cells": [
-        "car_input2.txt",
-        "car_output.txt"
-      ]
     }
   ]
 });
@@ -149,93 +143,7 @@ formatter.match({
   "location": "com.azmi.jacob.e2e.test.CheckCarDetailsStepdefs.theAccuracyOfTheInformationIsConfirmed()"
 });
 formatter.result({
-  "error_message": "java.lang.AssertionError: Some stored records do not match online records\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertFalse(Assert.java:65)\r\n\tat com.azmi.jacob.e2e.test.CheckCarDetailsStepdefs.theAccuracyOfTheInformationIsConfirmed(CheckCarDetailsStepdefs.java:187)\r\n\tat ✽.the accuracy of the information is confirmed(file:///C:/Users/Jacob/IdeaProjects/E2ECarRegTest/src/test/resources/features/CheckCarDetails.feature:14)\r\n",
-  "status": "failed"
-});
-formatter.scenario({
-  "name": "vehicle registrations extracted from file and information compared against online description",
-  "description": "",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "name": "i want to search for registrations from \"car_input2.txt\"",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "com.azmi.jacob.e2e.test.CheckCarDetailsStepdefs.iWantToSearchForRegistrationsFrom(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "UK vehicle registrations exist in file",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "com.azmi.jacob.e2e.test.CheckCarDetailsStepdefs.ukVehicleRegistrationsExistInFile()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "the file is read",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "com.azmi.jacob.e2e.test.CheckCarDetailsStepdefs.theFileIsRead()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "all empty lines are removed",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "com.azmi.jacob.e2e.test.CheckCarDetailsStepdefs.allEmptyLinesAreRemoved()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "registrations are extracted",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "com.azmi.jacob.e2e.test.CheckCarDetailsStepdefs.registrationsAreExtracted()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "searched for at \"https://cartaxcheck.co.uk/\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "com.azmi.jacob.e2e.test.CheckCarDetailsStepdefs.searchedForAt(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "the information is compared against the stored records in \"car_output.txt\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "com.azmi.jacob.e2e.test.CheckCarDetailsStepdefs.theInformationIsComparedAgainstTheStoredRecordsIn(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "the accuracy of the information is confirmed",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "com.azmi.jacob.e2e.test.CheckCarDetailsStepdefs.theAccuracyOfTheInformationIsConfirmed()"
-});
-formatter.result({
-  "error_message": "java.lang.AssertionError: Some stored records do not match online records\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertFalse(Assert.java:65)\r\n\tat com.azmi.jacob.e2e.test.CheckCarDetailsStepdefs.theAccuracyOfTheInformationIsConfirmed(CheckCarDetailsStepdefs.java:187)\r\n\tat ✽.the accuracy of the information is confirmed(file:///C:/Users/Jacob/IdeaProjects/E2ECarRegTest/src/test/resources/features/CheckCarDetails.feature:14)\r\n",
+  "error_message": "java.lang.AssertionError: Some stored records do not match online records\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertFalse(Assert.java:65)\r\n\tat com.azmi.jacob.e2e.test.CheckCarDetailsStepdefs.theAccuracyOfTheInformationIsConfirmed(CheckCarDetailsStepdefs.java:182)\r\n\tat ✽.the accuracy of the information is confirmed(file:///C:/Users/Jacob/IdeaProjects/E2ECarRegTest/src/test/resources/features/CheckCarDetails.feature:14)\r\n",
   "status": "failed"
 });
 });

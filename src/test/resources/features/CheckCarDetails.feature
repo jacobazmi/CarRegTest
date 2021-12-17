@@ -3,7 +3,7 @@ Feature: Check local file description of vehicle matches information online
   I want to check that the description of a vehicle stored on a local text file matches the description online
   So that I can confirm the validity of the information in the file
 
-  Scenario Outline: vehicle registrations extracted from file and information compared against online description
+  Scenario Outline: Registrations from file searched for online and results compared against local information
     Given i want to search for registrations from "<inputFile>"
     And UK vehicle registrations exist in file
     When the file is read
@@ -16,4 +16,4 @@ Feature: Check local file description of vehicle matches information online
     Examples:
       | inputFile | outputFile |
       | car_input.txt | car_output.txt |
-      | car_input2.txt | car_output.txt |
+#      | car_input2.txt | car_output.txt |

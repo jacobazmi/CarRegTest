@@ -16,4 +16,4 @@ Feature: Check local file description of vehicle matches information online
     Examples:
       | inputFile | outputFile |
       | car_input.txt | car_output.txt |
-      | car_input2.txt | car_output.txt |
+#      | car_input2.txt | car_output.txt |

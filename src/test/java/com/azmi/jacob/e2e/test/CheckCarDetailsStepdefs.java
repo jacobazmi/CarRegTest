@@ -25,15 +25,12 @@ import static org.junit.Assert.assertTrue;
 
 public class CheckCarDetailsStepdefs {
 
-    private String fileName;
     private String fileContent;
     private String testFilePath;
     private ReadFile myFile = new ReadFile();
     private List<String> allRegs;
     private String reg;
 
-    private WebDriver driver;
-    private Map<String, Object> vars;
     JavascriptExecutor js;
 
     private ArrayList<ArrayList<String>> webDesc = new ArrayList<ArrayList<String>>();
@@ -72,7 +69,7 @@ public class CheckCarDetailsStepdefs {
     public void registrationsAreExtracted() {
         myFile.extractRegList(fileContent);
         allRegs = myFile.getRegList();
-        System.out.println("All vehicle registrations in file: " + allRegs);
+        System.out.println("Vehicle registrations found in file: " + allRegs);
         listSize = allRegs.size();
     }
 
@@ -80,9 +77,9 @@ public class CheckCarDetailsStepdefs {
     public void searchedForAt(String url) {
         for (int i = 0; i < listSize; i++) {
             WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
+            WebDriver driver = new ChromeDriver();
             js = (JavascriptExecutor) driver;
-            vars = new HashMap<String, Object>();
+            Map<String, Object> vars = new HashMap<String, Object>();
             driver.get(url);
             driver.manage().window().setSize(new Dimension(1294, 1400));
 
@@ -107,13 +104,11 @@ public class CheckCarDetailsStepdefs {
                 failedSearch = true;
             }
 
+            webDesc.add(new ArrayList<String>());
             if (!failedSearch){
-                webDesc.add(new ArrayList<String>());
                 webDesc.get(i).add(null);
                 System.out.println("Vehicle not found: " + reg);
-                driver.quit();
             } else {
-                webDesc.add(new ArrayList<String>());
                 WebDriverWait wait = new WebDriverWait(driver,5);
                 wait.until(ExpectedConditions.textToBe(By.xpath("//*[@id=\"m\"]/div[2]/div[5]/div[1]/div/span/div[2]/dl[1]/dd"),reg));
                 List<WebElement> text = driver.findElement(By.xpath("//*[@id=\"m\"]/div[2]/div[5]/div[1]/div/span/div[2]")).findElements(By.tagName("dt"));
@@ -123,8 +118,8 @@ public class CheckCarDetailsStepdefs {
                 webDesc.get(i).remove(5);
                 webDesc.get(i).remove(5);
                 System.out.println("Webpage info: " + webDesc.get(i));
-                driver.quit();
             }
+            driver.quit();
         }
         System.out.println("\n");
     }
