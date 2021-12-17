@@ -1,8 +1,6 @@
 package com.azmi.jacob.e2e.test;
 
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -37,7 +35,7 @@ public class ReadFile {
 
 
     public void extractRegList(String fileContent) {
-        String ukRegPattern = "(([A-Z]{2})([0-9]{2})\\s([A-Z]{3}))|(([A-Z]{2})([0-9]{2})([A-Z]{3}))";
+        String ukRegPattern = "([A-Z]{2})([0-9]{2})\\s?([A-Z]{3})";
         Pattern pattern = Pattern.compile(ukRegPattern);
         Matcher matcher = pattern.matcher(fileContent);
         regList = new ArrayList<>();

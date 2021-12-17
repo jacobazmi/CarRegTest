@@ -6,11 +6,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.interactions.SourceType;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -45,7 +42,7 @@ public class CheckCarDetailsStepdefs {
 
     @And("UK vehicle registrations exist in file")
     public void ukVehicleRegistrationsExistInFile() throws FileNotFoundException {
-        String ukRegPattern = "(([A-Z]{2})([0-9]{2})\\s([A-Z]{3}))|(([A-Z]{2})([0-9]{2})([A-Z]{3}))";
+        String ukRegPattern = "([A-Z]{2})([0-9]{2})\\s?([A-Z]{3})";
         myFile.readFileScanner(testFilePath);
         fileContent = myFile.getFileContent();
         Pattern pattern = Pattern.compile(ukRegPattern);
@@ -78,8 +75,6 @@ public class CheckCarDetailsStepdefs {
         for (int i = 0; i < listSize; i++) {
             WebDriverManager.chromedriver().setup();
             WebDriver driver = new ChromeDriver();
-            js = (JavascriptExecutor) driver;
-            Map<String, Object> vars = new HashMap<String, Object>();
             driver.get(url);
             driver.manage().window().setSize(new Dimension(1294, 1400));
 

@@ -5,7 +5,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.scenarioOutline({
-  "name": "vehicle registrations extracted from file and information compared against online description",
+  "name": "Registrations from file searched for online and results compared against local information",
   "description": "",
   "keyword": "Scenario Outline"
 });
@@ -61,7 +61,7 @@ formatter.examples({
   ]
 });
 formatter.scenario({
-  "name": "vehicle registrations extracted from file and information compared against online description",
+  "name": "Registrations from file searched for online and results compared against local information",
   "description": "",
   "keyword": "Scenario Outline"
 });
@@ -143,7 +143,7 @@ formatter.match({
   "location": "com.azmi.jacob.e2e.test.CheckCarDetailsStepdefs.theAccuracyOfTheInformationIsConfirmed()"
 });
 formatter.result({
-  "error_message": "java.lang.AssertionError: Some stored records do not match online records\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertFalse(Assert.java:65)\r\n\tat com.azmi.jacob.e2e.test.CheckCarDetailsStepdefs.theAccuracyOfTheInformationIsConfirmed(CheckCarDetailsStepdefs.java:182)\r\n\tat ✽.the accuracy of the information is confirmed(file:///C:/Users/Jacob/IdeaProjects/E2ECarRegTest/src/test/resources/features/CheckCarDetails.feature:14)\r\n",
+  "error_message": "java.lang.AssertionError: Some stored records do not match online records\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertFalse(Assert.java:65)\r\n\tat com.azmi.jacob.e2e.test.CheckCarDetailsStepdefs.theAccuracyOfTheInformationIsConfirmed(CheckCarDetailsStepdefs.java:179)\r\n\tat ✽.the accuracy of the information is confirmed(file:///C:/Users/Jacob/IdeaProjects/E2ECarRegTest/src/test/resources/features/CheckCarDetails.feature:14)\r\n",
   "status": "failed"
 });
 });
